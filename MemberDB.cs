@@ -81,7 +81,7 @@ namespace 화면설계
                 return true;
         }
 
-        public bool Update(DataRow memberRow)
+        public bool Update(int memberNo, MemberInfo member)
         {
             string sql = @"update member set member_name = @member_name,
                                                   mobile1 = @mobile1,
@@ -91,13 +91,13 @@ namespace 화면설계
                                                   addr2 = @addr2
                            where member_no = @memberNo";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
-            CommonUtil.AddParameter(cmd, "@mamber_name", memberRow["member_name"].ToString());
-            CommonUtil.AddParameter(cmd, "@mobile1", memberRow["mobile1"].ToString(), MySqlDbType.Int32);
-            CommonUtil.AddParameter(cmd, "@mobile2", memberRow["mobile2"].ToString(),MySqlDbType.Int32);
-            CommonUtil.AddParameter(cmd, "@zipcode", memberRow["zipcode"].ToString());
-            CommonUtil.AddParameter(cmd, "@addr1", memberRow["addr1"].ToString());
-            CommonUtil.AddParameter(cmd, "@addr2", memberRow["addr2"].ToString());
-            CommonUtil.AddParameter(cmd, "@memberNo", memberRow["member_no"].ToString(), MySqlDbType.Int32);
+            CommonUtil.AddParameter(cmd, "@member_name", member.Name);
+            CommonUtil.AddParameter(cmd, "@mobile1", member.Mobile1, MySqlDbType.Int32);
+            CommonUtil.AddParameter(cmd, "@mobile2", member.Mobile2, MySqlDbType.Int32);
+            CommonUtil.AddParameter(cmd, "@zipcode", member.ZipCode);
+            CommonUtil.AddParameter(cmd, "@addr1", member.Addr);
+            CommonUtil.AddParameter(cmd, "@addr2", member.AddrDetail);
+            CommonUtil.AddParameter(cmd, "@memberNo", memberNo, MySqlDbType.Int32);
             int result = cmd.ExecuteNonQuery();
             return result == 0 ? false : true;
         }

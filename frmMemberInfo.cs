@@ -13,7 +13,7 @@ namespace 화면설계
     public partial class frmMemberInfo : Form
     {
         public DataRow MemberRow { get; set; }
-        public int MemberNo { get; set; }
+        public int memberNo;
         public frmMemberInfo()
         {
             InitializeComponent();
@@ -46,27 +46,13 @@ namespace 화면설계
             btnSearch.PerformClick();
         }
 
-        private void UpdateText()
-        {
-            lblName.Text = MemberRow["member_name"].ToString();
-            txtMemberName.Text = MemberRow["member_name"].ToString();
-            lblMemberNo.Text = MemberRow["member_no"].ToString();
-            txtPoint.Text = MemberRow["point"].ToString();
-            txtMobile1.Text = MemberRow["mobile1"].ToString();
-            txtMobile2.Text = MemberRow["mobile2"].ToString();
-            dtpBirth.Text = MemberRow["birth_date"].ToString();
-            txtZipCode.Text = MemberRow["zipcode"].ToString();
-            txtAddr.Text = MemberRow["addr1"].ToString();
-            txtAddrDetail.Text = MemberRow["addr2"].ToString();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             frmMemberSearch frm = new frmMemberSearch();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                this.MemberRow = frm.Member;
-                UpdateText();
+                this.memberNo = frm.MemberNo;
+                GetMemberInfo(memberNo);
             }
         }
 
@@ -103,7 +89,7 @@ namespace 화면설계
             try
             {
                 MemberDB db = new MemberDB();
-                bool result = db.AddPoint(Convert.ToInt32(lblMemberNo.Text), Convert.ToInt32(txtAddPoint.Text));
+                bool result = db.AddPoint(memberNo, Convert.ToInt32(txtAddPoint.Text));
                 if (result)
                 {
                     int newPoint = Convert.ToInt32(txtPoint.Text) + Convert.ToInt32(txtAddPoint.Text);
@@ -133,15 +119,22 @@ namespace 화면설계
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MemberDB db = new MemberDB();
-            int memberNo = Convert.ToInt32(lblMemberNo.Text);
             try
             {
-                bool result = db.Update(MemberRow);
+                MemberInfo member = new MemberInfo
+                {
+                    Name = lblName.Text,
+                    Mobile1 = Convert.ToInt32(txtMobile1.Text),
+                    Mobile2 = Convert.ToInt32(txtMobile2.Text),
+                    ZipCode = txtZipCode.Text,
+                    Addr = txtAddr.Text,
+                    AddrDetail = txtAddrDetail.Text
+                };
+                bool result = db.Update(memberNo, member);
                 if (result)
                 {
                     MessageBox.Show("수정 성공");
                     GetMemberInfo(memberNo);
-                    UpdateText();
                 }
             }
             catch (Exception err)
@@ -158,7 +151,25 @@ namespace 화면설계
         private void GetMemberInfo(int memberNo)
         {
             MemberDB db = new MemberDB();
-            MemberRow = db.GetMemberInfo(memberNo);
+            try
+            {
+                DataRow dr = db.GetMemberInfo(memberNo);
+                lblName.Text = dr["member_name"].ToString();
+                txtMemberName.Text = dr["member_name"].ToString();
+                lblMemberNo.Text = dr["member_no"].ToString();
+                txtPoint.Text = dr["point"].ToString();
+                txtMobile1.Text = dr["mobile1"].ToString();
+                txtMobile2.Text = dr["mobile2"].ToString();
+                dtpBirth.Text = dr["birth_date"].ToString();
+                txtZipCode.Text = dr["zipcode"].ToString();
+                txtAddr.Text = dr["addr1"].ToString();
+                txtAddrDetail.Text = dr["addr2"].ToString();
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            db.Dispose();
         }
     }
 }

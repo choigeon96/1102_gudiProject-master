@@ -12,9 +12,7 @@ namespace 화면설계
 {
     public partial class frmMemberSearch : Form
     {
-        public DataRow Member { get; set; }
         DataTable dt;
-        public MemberInfo memberInfo;
         public int MemberNo { get; set; }
         public frmMemberSearch()
         {
@@ -73,7 +71,6 @@ namespace 화면설계
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            Member = dt.Rows[dgvMember.CurrentRow.Index];
             MemberNo = Convert.ToInt32(dgvMember[0, dgvMember.CurrentRow.Index].Value);
             MessageBox.Show(MemberNo.ToString());
             this.DialogResult = DialogResult.OK;

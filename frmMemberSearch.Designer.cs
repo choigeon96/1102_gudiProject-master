@@ -70,7 +70,7 @@
             this.dgvMember.Location = new System.Drawing.Point(199, 12);
             this.dgvMember.Name = "dgvMember";
             this.dgvMember.RowTemplate.Height = 23;
-            this.dgvMember.Size = new System.Drawing.Size(454, 242);
+            this.dgvMember.Size = new System.Drawing.Size(336, 242);
             this.dgvMember.TabIndex = 4;
             this.dgvMember.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

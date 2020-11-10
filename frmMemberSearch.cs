@@ -14,6 +14,8 @@ namespace 화면설계
     {
         public DataRow Member { get; set; }
         DataTable dt;
+        public MemberInfo memberInfo;
+        public int MemberNo { get; set; }
         public frmMemberSearch()
         {
             InitializeComponent();
@@ -72,7 +74,9 @@ namespace 화면설계
         private void btnSelect_Click(object sender, EventArgs e)
         {
             Member = dt.Rows[dgvMember.CurrentRow.Index];
-            //MessageBox.Show(Member["member_name"].ToString());
+            MemberNo = Convert.ToInt32(dgvMember[0, dgvMember.CurrentRow.Index].Value);
+            MessageBox.Show(MemberNo.ToString());
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

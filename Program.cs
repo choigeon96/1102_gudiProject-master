@@ -16,7 +16,7 @@ namespace 화면설계
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMemberSearch());
+            Application.Run(new frmLogin());
         }
     }
 }

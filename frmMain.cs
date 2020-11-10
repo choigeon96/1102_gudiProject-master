@@ -12,6 +12,7 @@ namespace 화면설계
 {
     public partial class frmMain : Form
     {
+        frmMemberInfo frmMember;
         public frmLogin login;
         public frmMain()
         {
@@ -80,6 +81,15 @@ namespace 화면설계
 
         private void btnRegProduct_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnMemberInfo_Click(object sender, EventArgs e)
+        {
+            
+            frmMember = new frmMemberInfo();
+            frmMember.MdiParent = this;
+            frmMember.Show();
 
         }
     }

@@ -79,19 +79,5 @@ namespace 화면설계
             code.Dispose();
         }
     }
-    public class MemberInfo
-    {
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public string Job { get; set; }
-        public string Email { get; set; }
-        public string ZipCode { get; set; }
-        public string Addr { get; set; }
-        public string AddrDetail { get; set; }
-        public int Mobile1 { get; set; }
-        public int Mobile2 { get; set; }
-        public DateTime Birth { get; set; }
-
-
-    }
+    
 }

@@ -43,10 +43,10 @@
             this.btnSchedule = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGraph = new System.Windows.Forms.ToolStripMenuItem();
             this.직원관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRegProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManual = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnRegProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,14 +79,14 @@
             // btnNewSales
             // 
             this.btnNewSales.Name = "btnNewSales";
-            this.btnNewSales.Size = new System.Drawing.Size(180, 22);
+            this.btnNewSales.Size = new System.Drawing.Size(126, 22);
             this.btnNewSales.Text = "매출 등록";
             this.btnNewSales.Click += new System.EventHandler(this.btnNewSales_Click);
             // 
             // btnSales
             // 
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(180, 22);
+            this.btnSales.Size = new System.Drawing.Size(126, 22);
             this.btnSales.Text = "매출 내역";
             // 
             // toolStripMenuItem2
@@ -118,19 +118,19 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(67, 20);
             this.toolStripMenuItem3.Text = "고객관리";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // btnNewMember
             // 
             this.btnNewMember.Name = "btnNewMember";
-            this.btnNewMember.Size = new System.Drawing.Size(126, 22);
+            this.btnNewMember.Size = new System.Drawing.Size(180, 22);
             this.btnNewMember.Text = "고객 등록";
             // 
             // btnMemberInfo
             // 
             this.btnMemberInfo.Name = "btnMemberInfo";
-            this.btnMemberInfo.Size = new System.Drawing.Size(126, 22);
+            this.btnMemberInfo.Size = new System.Drawing.Size(180, 22);
             this.btnMemberInfo.Text = "고객 정보";
+            this.btnMemberInfo.Click += new System.EventHandler(this.btnMemberInfo_Click);
             // 
             // 매장관리ToolStripMenuItem
             // 
@@ -163,6 +163,13 @@
             this.직원관리ToolStripMenuItem.Text = "직원 관리";
             this.직원관리ToolStripMenuItem.Click += new System.EventHandler(this.직원관리ToolStripMenuItem_Click);
             // 
+            // btnRegProduct
+            // 
+            this.btnRegProduct.Name = "btnRegProduct";
+            this.btnRegProduct.Size = new System.Drawing.Size(180, 22);
+            this.btnRegProduct.Text = "상품/거래처 등록";
+            this.btnRegProduct.Click += new System.EventHandler(this.btnRegProduct_Click);
+            // 
             // btnManual
             // 
             this.btnManual.Name = "btnManual";
@@ -180,13 +187,6 @@
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            // 
-            // btnRegProduct
-            // 
-            this.btnRegProduct.Name = "btnRegProduct";
-            this.btnRegProduct.Size = new System.Drawing.Size(180, 22);
-            this.btnRegProduct.Text = "상품/거래처 등록";
-            this.btnRegProduct.Click += new System.EventHandler(this.btnRegProduct_Click);
             // 
             // frmMain
             // 

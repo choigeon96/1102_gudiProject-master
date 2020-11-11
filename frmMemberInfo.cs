@@ -44,6 +44,14 @@ namespace 화면설계
             this.WindowState = FormWindowState.Maximized;
             lblDate.Text = DateTime.Now.ToLongDateString();
             btnSearch.PerformClick();
+            CommonUtil.SetInitGridView(dgvSales);
+            CommonUtil.AddGridTextColumn(dgvSales, "분류", "category", 80);
+            CommonUtil.AddGridTextColumn(dgvSales, "제조사", "manufacture", 100);
+            CommonUtil.AddGridTextColumn(dgvSales, "상품명", "product_name", 200);
+            CommonUtil.AddGridTextColumn(dgvSales, "가격", "selling_price", 80);
+            CommonUtil.AddGridTextColumn(dgvSales, "수량", "amount", 60);
+            CommonUtil.AddGridTextColumn(dgvSales, "총액", "total", 80);
+            CommonUtil.AddGridTextColumn(dgvSales, "메모", "memo", 150);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

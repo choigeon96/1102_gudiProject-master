@@ -183,6 +183,7 @@
     <Compile Include="frmSchedule.Designer.cs">
       <DependentUpon>frmSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesDB.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <EmbeddedResource Include="AddrControl.resx">
       <DependentUpon>AddrControl.cs</DependentUpon>

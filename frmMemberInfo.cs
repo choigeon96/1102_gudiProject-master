@@ -53,6 +53,7 @@ namespace 화면설계
             {
                 this.memberNo = frm.MemberNo;
                 GetMemberInfo(memberNo);
+                GetVisitDate(memberNo);
             }
         }
 
@@ -164,6 +165,37 @@ namespace 화면설계
                 txtZipCode.Text = dr["zipcode"].ToString();
                 txtAddr.Text = dr["addr1"].ToString();
                 txtAddrDetail.Text = dr["addr2"].ToString();
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            db.Dispose();
+        }
+        private void GetVisitDate(int memberNo)
+        {
+            SalesDB db = new SalesDB();
+            try
+            {
+                DataTable dt = db.GetVisitDate(memberNo);
+                libVisitDate.DataSource = dt;
+                libVisitDate.DisplayMember = "sales_date";
+                libVisitDate.ValueMember = "sales_date";
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            db.Dispose();
+        }
+
+        private void libVisitDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SalesDB db = new SalesDB();
+            try
+            {
+                DataTable dt = db.GetSalesInfo(Convert.ToDateTime(libVisitDate.SelectedValue));
+                dgvSales.DataSource = dt;
             }
             catch(Exception err)
             {

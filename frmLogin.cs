@@ -74,9 +74,5 @@ namespace 화면설계
             if (e.KeyChar == 13)
                 btnLogin.PerformClick();
         }
-
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
     }
 }

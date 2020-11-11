@@ -53,6 +53,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(87, 21);
             this.txtName.TabIndex = 2;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // btnSearch
             // 

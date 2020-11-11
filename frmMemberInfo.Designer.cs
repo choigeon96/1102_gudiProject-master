@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblMemberNo = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSearchAddr = new System.Windows.Forms.Button();
             this.btnAddPoint = new System.Windows.Forms.Button();
@@ -56,16 +57,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvSales = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -75,24 +68,22 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.txtOSPRISM = new System.Windows.Forms.TextBox();
+            this.txtODPRISM = new System.Windows.Forms.TextBox();
+            this.txtOSOH = new System.Windows.Forms.TextBox();
+            this.txtODOH = new System.Windows.Forms.TextBox();
+            this.txtOSSPH = new System.Windows.Forms.TextBox();
+            this.txtOSClosePD = new System.Windows.Forms.TextBox();
+            this.txtODSPH = new System.Windows.Forms.TextBox();
+            this.txtOSCYL = new System.Windows.Forms.TextBox();
+            this.txtODClosePD = new System.Windows.Forms.TextBox();
+            this.txtOSADD = new System.Windows.Forms.TextBox();
+            this.txtODCYL = new System.Windows.Forms.TextBox();
+            this.txtOSAXIS = new System.Windows.Forms.TextBox();
+            this.txtODADD = new System.Windows.Forms.TextBox();
+            this.txtOSFarPD = new System.Windows.Forms.TextBox();
+            this.txtODAXIS = new System.Windows.Forms.TextBox();
+            this.txtODFarPD = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
@@ -128,9 +119,8 @@
             this.btnEyeTesst = new System.Windows.Forms.Button();
             this.btnNewSales = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.방문일자 = new System.Windows.Forms.ListBox();
+            this.libVisitDate = new System.Windows.Forms.ListBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.lblMemberNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -188,11 +178,20 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnEyeTesst);
             this.splitContainer1.Panel2.Controls.Add(this.btnNewSales);
             this.splitContainer1.Panel2.Controls.Add(this.btnSearch);
-            this.splitContainer1.Panel2.Controls.Add(this.방문일자);
+            this.splitContainer1.Panel2.Controls.Add(this.libVisitDate);
             this.splitContainer1.Panel2.Controls.Add(this.label34);
             this.splitContainer1.Size = new System.Drawing.Size(1245, 489);
             this.splitContainer1.SplitterDistance = 339;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lblMemberNo
+            // 
+            this.lblMemberNo.AutoSize = true;
+            this.lblMemberNo.Location = new System.Drawing.Point(78, 105);
+            this.lblMemberNo.Name = "lblMemberNo";
+            this.lblMemberNo.Size = new System.Drawing.Size(0, 12);
+            this.lblMemberNo.TabIndex = 57;
+            this.lblMemberNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnUpdate
             // 
@@ -421,57 +420,11 @@
             // dgvSales
             // 
             this.dgvSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
             this.dgvSales.Location = new System.Drawing.Point(22, 239);
             this.dgvSales.Name = "dgvSales";
             this.dgvSales.RowTemplate.Height = 23;
             this.dgvSales.Size = new System.Drawing.Size(861, 218);
             this.dgvSales.TabIndex = 72;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "no";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "분류";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "브랜드";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "상품명";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 250;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "색상";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "수량";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 60;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "단가";
-            this.Column7.Name = "Column7";
             // 
             // tabControl1
             // 
@@ -485,7 +438,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label26);
@@ -495,24 +447,22 @@
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.textBox10);
-            this.tabPage1.Controls.Add(this.textBox11);
-            this.tabPage1.Controls.Add(this.textBox12);
-            this.tabPage1.Controls.Add(this.textBox13);
-            this.tabPage1.Controls.Add(this.textBox14);
-            this.tabPage1.Controls.Add(this.textBox15);
-            this.tabPage1.Controls.Add(this.textBox16);
-            this.tabPage1.Controls.Add(this.textBox17);
-            this.tabPage1.Controls.Add(this.textBox18);
-            this.tabPage1.Controls.Add(this.textBox21);
-            this.tabPage1.Controls.Add(this.textBox22);
-            this.tabPage1.Controls.Add(this.textBox23);
-            this.tabPage1.Controls.Add(this.textBox24);
-            this.tabPage1.Controls.Add(this.textBox25);
-            this.tabPage1.Controls.Add(this.textBox26);
-            this.tabPage1.Controls.Add(this.textBox44);
-            this.tabPage1.Controls.Add(this.textBox45);
+            this.tabPage1.Controls.Add(this.txtOSPRISM);
+            this.tabPage1.Controls.Add(this.txtODPRISM);
+            this.tabPage1.Controls.Add(this.txtOSOH);
+            this.tabPage1.Controls.Add(this.txtODOH);
+            this.tabPage1.Controls.Add(this.txtOSSPH);
+            this.tabPage1.Controls.Add(this.txtOSClosePD);
+            this.tabPage1.Controls.Add(this.txtODSPH);
+            this.tabPage1.Controls.Add(this.txtOSCYL);
+            this.tabPage1.Controls.Add(this.txtODClosePD);
+            this.tabPage1.Controls.Add(this.txtOSADD);
+            this.tabPage1.Controls.Add(this.txtODCYL);
+            this.tabPage1.Controls.Add(this.txtOSAXIS);
+            this.tabPage1.Controls.Add(this.txtODADD);
+            this.tabPage1.Controls.Add(this.txtOSFarPD);
+            this.tabPage1.Controls.Add(this.txtODAXIS);
+            this.tabPage1.Controls.Add(this.txtODFarPD);
             this.tabPage1.Controls.Add(this.label33);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -522,19 +472,10 @@
             this.tabPage1.Text = "안경";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(526, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 12);
-            this.label10.TabIndex = 119;
-            this.label10.Text = "RX";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(463, 13);
+            this.label11.Location = new System.Drawing.Point(591, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 12);
             this.label11.TabIndex = 118;
@@ -543,7 +484,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(242, 13);
+            this.label25.Location = new System.Drawing.Point(298, 13);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 12);
             this.label25.TabIndex = 117;
@@ -552,7 +493,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(421, 13);
+            this.label26.Location = new System.Drawing.Point(528, 13);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(22, 12);
             this.label26.TabIndex = 116;
@@ -561,7 +502,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(356, 13);
+            this.label27.Location = new System.Drawing.Point(444, 13);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(45, 12);
             this.label27.TabIndex = 115;
@@ -570,7 +511,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(190, 13);
+            this.label28.Location = new System.Drawing.Point(231, 13);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(32, 12);
             this.label28.TabIndex = 114;
@@ -579,7 +520,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(307, 13);
+            this.label29.Location = new System.Drawing.Point(379, 13);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(29, 12);
             this.label29.TabIndex = 113;
@@ -588,7 +529,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(141, 13);
+            this.label30.Location = new System.Drawing.Point(160, 13);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(29, 12);
             this.label30.TabIndex = 112;
@@ -597,7 +538,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(92, 13);
+            this.label31.Location = new System.Drawing.Point(87, 13);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(29, 12);
             this.label31.TabIndex = 111;
@@ -613,131 +554,117 @@
             this.label32.TabIndex = 92;
             this.label32.Text = "OD";
             // 
-            // textBox9
+            // txtOSPRISM
             // 
-            this.textBox9.Location = new System.Drawing.Point(521, 28);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(41, 21);
-            this.textBox9.TabIndex = 109;
+            this.txtOSPRISM.Location = new System.Drawing.Point(592, 28);
+            this.txtOSPRISM.Name = "txtOSPRISM";
+            this.txtOSPRISM.Size = new System.Drawing.Size(41, 21);
+            this.txtOSPRISM.TabIndex = 107;
             // 
-            // textBox10
+            // txtODPRISM
             // 
-            this.textBox10.Location = new System.Drawing.Point(521, 57);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(41, 21);
-            this.textBox10.TabIndex = 108;
+            this.txtODPRISM.Location = new System.Drawing.Point(592, 57);
+            this.txtODPRISM.Name = "txtODPRISM";
+            this.txtODPRISM.Size = new System.Drawing.Size(41, 21);
+            this.txtODPRISM.TabIndex = 110;
             // 
-            // textBox11
+            // txtOSOH
             // 
-            this.textBox11.Location = new System.Drawing.Point(466, 28);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(41, 21);
-            this.textBox11.TabIndex = 107;
+            this.txtOSOH.Location = new System.Drawing.Point(519, 28);
+            this.txtOSOH.Name = "txtOSOH";
+            this.txtOSOH.Size = new System.Drawing.Size(41, 21);
+            this.txtOSOH.TabIndex = 106;
             // 
-            // textBox12
+            // txtODOH
             // 
-            this.textBox12.Location = new System.Drawing.Point(466, 57);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(41, 21);
-            this.textBox12.TabIndex = 110;
+            this.txtODOH.Location = new System.Drawing.Point(519, 57);
+            this.txtODOH.Name = "txtODOH";
+            this.txtODOH.Size = new System.Drawing.Size(41, 21);
+            this.txtODOH.TabIndex = 105;
             // 
-            // textBox13
+            // txtOSSPH
             // 
-            this.textBox13.Location = new System.Drawing.Point(411, 28);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(41, 21);
-            this.textBox13.TabIndex = 106;
+            this.txtOSSPH.Location = new System.Drawing.Point(81, 28);
+            this.txtOSSPH.Name = "txtOSSPH";
+            this.txtOSSPH.Size = new System.Drawing.Size(41, 21);
+            this.txtOSSPH.TabIndex = 94;
             // 
-            // textBox14
+            // txtOSClosePD
             // 
-            this.textBox14.Location = new System.Drawing.Point(411, 57);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(41, 21);
-            this.textBox14.TabIndex = 105;
+            this.txtOSClosePD.Location = new System.Drawing.Point(446, 28);
+            this.txtOSClosePD.Name = "txtOSClosePD";
+            this.txtOSClosePD.Size = new System.Drawing.Size(41, 21);
+            this.txtOSClosePD.TabIndex = 104;
             // 
-            // textBox15
+            // txtODSPH
             // 
-            this.textBox15.Location = new System.Drawing.Point(81, 28);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(41, 21);
-            this.textBox15.TabIndex = 94;
+            this.txtODSPH.Location = new System.Drawing.Point(81, 57);
+            this.txtODSPH.Name = "txtODSPH";
+            this.txtODSPH.Size = new System.Drawing.Size(41, 21);
+            this.txtODSPH.TabIndex = 93;
             // 
-            // textBox16
+            // txtOSCYL
             // 
-            this.textBox16.Location = new System.Drawing.Point(356, 28);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(41, 21);
-            this.textBox16.TabIndex = 104;
+            this.txtOSCYL.Location = new System.Drawing.Point(154, 28);
+            this.txtOSCYL.Name = "txtOSCYL";
+            this.txtOSCYL.Size = new System.Drawing.Size(41, 21);
+            this.txtOSCYL.TabIndex = 96;
             // 
-            // textBox17
+            // txtODClosePD
             // 
-            this.textBox17.Location = new System.Drawing.Point(81, 57);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(41, 21);
-            this.textBox17.TabIndex = 93;
+            this.txtODClosePD.Location = new System.Drawing.Point(446, 57);
+            this.txtODClosePD.Name = "txtODClosePD";
+            this.txtODClosePD.Size = new System.Drawing.Size(41, 21);
+            this.txtODClosePD.TabIndex = 103;
             // 
-            // textBox18
+            // txtOSADD
             // 
-            this.textBox18.Location = new System.Drawing.Point(136, 28);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(41, 21);
-            this.textBox18.TabIndex = 96;
+            this.txtOSADD.Location = new System.Drawing.Point(373, 28);
+            this.txtOSADD.Name = "txtOSADD";
+            this.txtOSADD.Size = new System.Drawing.Size(41, 21);
+            this.txtOSADD.TabIndex = 102;
             // 
-            // textBox21
+            // txtODCYL
             // 
-            this.textBox21.Location = new System.Drawing.Point(356, 57);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(41, 21);
-            this.textBox21.TabIndex = 103;
+            this.txtODCYL.Location = new System.Drawing.Point(154, 57);
+            this.txtODCYL.Name = "txtODCYL";
+            this.txtODCYL.Size = new System.Drawing.Size(41, 21);
+            this.txtODCYL.TabIndex = 95;
             // 
-            // textBox22
+            // txtOSAXIS
             // 
-            this.textBox22.Location = new System.Drawing.Point(301, 28);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(41, 21);
-            this.textBox22.TabIndex = 102;
+            this.txtOSAXIS.Location = new System.Drawing.Point(227, 28);
+            this.txtOSAXIS.Name = "txtOSAXIS";
+            this.txtOSAXIS.Size = new System.Drawing.Size(41, 21);
+            this.txtOSAXIS.TabIndex = 98;
             // 
-            // textBox23
+            // txtODADD
             // 
-            this.textBox23.Location = new System.Drawing.Point(136, 57);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(41, 21);
-            this.textBox23.TabIndex = 95;
+            this.txtODADD.Location = new System.Drawing.Point(373, 57);
+            this.txtODADD.Name = "txtODADD";
+            this.txtODADD.Size = new System.Drawing.Size(41, 21);
+            this.txtODADD.TabIndex = 101;
             // 
-            // textBox24
+            // txtOSFarPD
             // 
-            this.textBox24.Location = new System.Drawing.Point(191, 28);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(41, 21);
-            this.textBox24.TabIndex = 98;
+            this.txtOSFarPD.Location = new System.Drawing.Point(300, 28);
+            this.txtOSFarPD.Name = "txtOSFarPD";
+            this.txtOSFarPD.Size = new System.Drawing.Size(41, 21);
+            this.txtOSFarPD.TabIndex = 99;
             // 
-            // textBox25
+            // txtODAXIS
             // 
-            this.textBox25.Location = new System.Drawing.Point(301, 57);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(41, 21);
-            this.textBox25.TabIndex = 101;
+            this.txtODAXIS.Location = new System.Drawing.Point(227, 57);
+            this.txtODAXIS.Name = "txtODAXIS";
+            this.txtODAXIS.Size = new System.Drawing.Size(41, 21);
+            this.txtODAXIS.TabIndex = 97;
             // 
-            // textBox26
+            // txtODFarPD
             // 
-            this.textBox26.Location = new System.Drawing.Point(246, 28);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(41, 21);
-            this.textBox26.TabIndex = 99;
-            // 
-            // textBox44
-            // 
-            this.textBox44.Location = new System.Drawing.Point(191, 57);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(41, 21);
-            this.textBox44.TabIndex = 97;
-            // 
-            // textBox45
-            // 
-            this.textBox45.Location = new System.Drawing.Point(246, 57);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(41, 21);
-            this.textBox45.TabIndex = 100;
+            this.txtODFarPD.Location = new System.Drawing.Point(300, 57);
+            this.txtODFarPD.Name = "txtODFarPD";
+            this.txtODFarPD.Size = new System.Drawing.Size(41, 21);
+            this.txtODFarPD.TabIndex = 100;
             // 
             // label33
             // 
@@ -1055,18 +982,15 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // 방문일자
+            // libVisitDate
             // 
-            this.방문일자.FormattingEnabled = true;
-            this.방문일자.ItemHeight = 12;
-            this.방문일자.Items.AddRange(new object[] {
-            "2000-01-01",
-            "2010-01-01",
-            "2020-01-01"});
-            this.방문일자.Location = new System.Drawing.Point(698, 127);
-            this.방문일자.Name = "방문일자";
-            this.방문일자.Size = new System.Drawing.Size(185, 88);
-            this.방문일자.TabIndex = 71;
+            this.libVisitDate.FormattingEnabled = true;
+            this.libVisitDate.ItemHeight = 12;
+            this.libVisitDate.Location = new System.Drawing.Point(698, 127);
+            this.libVisitDate.Name = "libVisitDate";
+            this.libVisitDate.Size = new System.Drawing.Size(185, 88);
+            this.libVisitDate.TabIndex = 71;
+            this.libVisitDate.SelectedIndexChanged += new System.EventHandler(this.libVisitDate_SelectedIndexChanged);
             // 
             // label34
             // 
@@ -1076,15 +1000,6 @@
             this.label34.Size = new System.Drawing.Size(53, 12);
             this.label34.TabIndex = 21;
             this.label34.Text = "방문일자";
-            // 
-            // lblMemberNo
-            // 
-            this.lblMemberNo.AutoSize = true;
-            this.lblMemberNo.Location = new System.Drawing.Point(78, 105);
-            this.lblMemberNo.Name = "lblMemberNo";
-            this.lblMemberNo.Size = new System.Drawing.Size(0, 12);
-            this.lblMemberNo.TabIndex = 57;
-            this.lblMemberNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMemberInfo
             // 
@@ -1137,7 +1052,7 @@
         private System.Windows.Forms.Button btnNewSales;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvSales;
-        private System.Windows.Forms.ListBox 방문일자;
+        private System.Windows.Forms.ListBox libVisitDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1155,7 +1070,6 @@
         private System.Windows.Forms.Button btnAddPoint;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtPoint;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
@@ -1165,24 +1079,22 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox txtOSPRISM;
+        private System.Windows.Forms.TextBox txtODPRISM;
+        private System.Windows.Forms.TextBox txtOSOH;
+        private System.Windows.Forms.TextBox txtODOH;
+        private System.Windows.Forms.TextBox txtOSSPH;
+        private System.Windows.Forms.TextBox txtOSClosePD;
+        private System.Windows.Forms.TextBox txtODSPH;
+        private System.Windows.Forms.TextBox txtOSCYL;
+        private System.Windows.Forms.TextBox txtODClosePD;
+        private System.Windows.Forms.TextBox txtOSADD;
+        private System.Windows.Forms.TextBox txtODCYL;
+        private System.Windows.Forms.TextBox txtOSAXIS;
+        private System.Windows.Forms.TextBox txtODADD;
+        private System.Windows.Forms.TextBox txtOSFarPD;
+        private System.Windows.Forms.TextBox txtODAXIS;
+        private System.Windows.Forms.TextBox txtODFarPD;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -1207,13 +1119,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSearchAddr;
         private System.Windows.Forms.TextBox txtAddrDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblMemberNo;

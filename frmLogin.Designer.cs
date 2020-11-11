@@ -66,7 +66,7 @@
             this.txtPwd.Size = new System.Drawing.Size(354, 28);
             this.txtPwd.TabIndex = 1;
             this.txtPwd.UseSystemPasswordChar = true;
-            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
+            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
             // 
             // pictureBox1
             // 

@@ -14,6 +14,7 @@ namespace 화면설계
     {
         public DataRow MemberRow { get; set; }
         public int memberNo;
+        bool lbxFlag = false;
         public frmMemberInfo()
         {
             InitializeComponent();
@@ -43,7 +44,6 @@ namespace 화면설계
         {
             this.WindowState = FormWindowState.Maximized;
             lblDate.Text = DateTime.Now.ToLongDateString();
-            btnSearch.PerformClick();
             CommonUtil.SetInitGridView(dgvSales);
             CommonUtil.AddGridTextColumn(dgvSales, "분류", "category", 80);
             CommonUtil.AddGridTextColumn(dgvSales, "제조사", "manufacture", 100);
@@ -52,6 +52,7 @@ namespace 화면설계
             CommonUtil.AddGridTextColumn(dgvSales, "수량", "amount", 60);
             CommonUtil.AddGridTextColumn(dgvSales, "총액", "total", 80);
             CommonUtil.AddGridTextColumn(dgvSales, "메모", "memo", 150);
+            btnSearch.PerformClick();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -61,26 +62,31 @@ namespace 화면설계
             {
                 this.memberNo = frm.MemberNo;
                 GetMemberInfo(memberNo);
-                GetVisitDate(memberNo);
+                lbxFlag =  GetVisitDate(memberNo);
+                libVisitDate_SelectedIndexChanged(null, null);
+                GetEyeTestInfo(memberNo);
             }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             frmRegSales regSales = new frmRegSales();
-            regSales.Show();
+            regSales.ShowDialog();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
             frmRegMember regMember = new frmRegMember();
-            regMember.Show();
+            regMember.ShowDialog();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btnEyeTest_Click(object sender, EventArgs e)
         {
-            frmNewEyeTest newEyeTest = new frmNewEyeTest();
-            newEyeTest.Show();
+            frmNewEyeTest newEyeTest = new frmNewEyeTest(memberNo);
+            if (newEyeTest.ShowDialog() == DialogResult.OK)
+            {
+                GetEyeTestInfo(memberNo);
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -174,38 +180,98 @@ namespace 화면설계
                 txtAddr.Text = dr["addr1"].ToString();
                 txtAddrDetail.Text = dr["addr2"].ToString();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
             db.Dispose();
         }
-        private void GetVisitDate(int memberNo)
+        private bool GetVisitDate(int memberNo)
         {
             SalesDB db = new SalesDB();
+            DataTable dt = new DataTable();
             try
             {
-                DataTable dt = db.GetVisitDate(memberNo);
+                dt = db.GetVisitDate(memberNo);
                 libVisitDate.DataSource = dt;
                 libVisitDate.DisplayMember = "sales_date";
                 libVisitDate.ValueMember = "sales_date";
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
             db.Dispose();
+
+            return dt.Rows.Count > 0 ? true : false;
         }
 
         private void libVisitDate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SalesDB db = new SalesDB();
+            if (lbxFlag)
+            {
+                SalesDB db = new SalesDB();
+                try
+                {
+                    DataTable dt = db.GetSalesInfo(Convert.ToDateTime(libVisitDate.SelectedValue));
+                    dgvSales.DataSource = dt;
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                db.Dispose();
+            }
+        }
+
+        private void GetEyeTestInfo(int memberNo)
+        {
+            EyeTestDB db = new EyeTestDB();
             try
             {
-                DataTable dt = db.GetSalesInfo(Convert.ToDateTime(libVisitDate.SelectedValue));
-                dgvSales.DataSource = dt;
+                DataSet ds = new DataSet();
+                ds.Tables.Add(db.GetGlassesInfo(memberNo));
+                ds.Tables[0].TableName = "glasses";
+                ds.Tables.Add(db.GetLensInfo(memberNo));
+                ds.Tables[1].TableName = "lens";
+
+                DataRow glassOS = ds.Tables["glasses"].Rows[0];
+                txtOSSPH.Text = glassOS["SPH"].ToString();
+                txtOSCYL.Text = glassOS["CYL"].ToString();
+                txtOSAXIS.Text = glassOS["AXIS"].ToString();
+                txtOSFarPD.Text = glassOS["far_PD"].ToString();
+                txtOSADD.Text = glassOS["ADD"].ToString();
+                txtOSClosePD.Text = glassOS["close_PD"].ToString();
+                txtOSOH.Text = glassOS["OH"].ToString();
+                txtOSPRISM.Text = glassOS["PRISM"].ToString();
+
+                DataRow glassOD = ds.Tables["glasses"].Rows[1];
+                txtODSPH.Text = glassOD["SPH"].ToString();
+                txtODCYL.Text = glassOD["CYL"].ToString();
+                txtODAXIS.Text = glassOD["AXIS"].ToString();
+                txtODFarPD.Text = glassOD["far_PD"].ToString();
+                txtODADD.Text = glassOD["ADD"].ToString();
+                txtODClosePD.Text = glassOD["close_PD"].ToString();
+                txtODOH.Text = glassOD["OH"].ToString();
+                txtODPRISM.Text = glassOD["PRISM"].ToString();
+
+                DataRow lensOS = ds.Tables["lens"].Rows[0];
+                txtOSCYL_L.Text = lensOS["CYL"].ToString();
+                txtOSSPH_L.Text = lensOS["SPH"].ToString();
+                txtOSADD_L.Text = lensOS["ADD"].ToString();
+                txtOSBC.Text = lensOS["BC"].ToString();
+                txtOSDIA.Text = lensOS["DIA"].ToString();
+                txtOSKERATO.Text = lensOS["KERATO"].ToString();
+
+                DataRow lensOD = ds.Tables["lens"].Rows[0];
+                txtODCYL_L.Text = lensOD["CYL"].ToString();
+                txtODSPH_L.Text = lensOD["SPH"].ToString();
+                txtODADD_L.Text = lensOD["ADD"].ToString();
+                txtODBC.Text = lensOD["BC"].ToString();
+                txtODDIA.Text = lensOD["DIA"].ToString();
+                txtODKERATO.Text = lensOD["KERATO"].ToString();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }

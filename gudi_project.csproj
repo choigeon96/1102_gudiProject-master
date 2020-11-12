@@ -76,6 +76,7 @@
       <DependentUpon>ctrDate.cs</DependentUpon>
     </Compile>
     <Compile Include="DB\DistributorDB.cs" />
+    <Compile Include="EyeTestDB.cs" />
     <Compile Include="frmFindID.cs">
       <SubType>Form</SubType>
     </Compile>

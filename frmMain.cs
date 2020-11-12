@@ -13,10 +13,13 @@ namespace 화면설계
     public partial class frmMain : Form
     {
         frmMemberInfo frmMember;
+        static string empID;
+        static public string EmpID { get { return empID; } }
         public frmLogin login;
-        public frmMain()
+        public frmMain(string empID)
         {
             InitializeComponent();
+            frmMain.empID = empID;
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)

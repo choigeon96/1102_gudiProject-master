@@ -20,7 +20,7 @@ namespace 화면설계
 
         public DataTable GetVisitDate(int memberNo)
         {
-            string sql = "select sales_no, sales_date from sales where member_no = @memberNo";
+            string sql = "select sales_no, sales_date from sales where member_no = @memberNo order by sales_date desc";
             MySqlDataAdapter da = new MySqlDataAdapter(sql,conn);
             da.SelectCommand.Parameters.Add("@memberNo", MySqlDbType.Int32);
             da.SelectCommand.Parameters["@memberNo"].Value = memberNo;

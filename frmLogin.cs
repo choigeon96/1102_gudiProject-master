@@ -57,7 +57,7 @@ namespace 화면설계
             else
             {
                 this.Hide();
-                frmMain frm = new frmMain();
+                frmMain frm = new frmMain(txtID.Text);
                 frm.Text = loginName;
                 frm.login = this;
                 frm.Show();

@@ -28,72 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cboShipping = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.dgvCart = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnSearchAddr = new System.Windows.Forms.Button();
+            this.txtAddrDetail = new System.Windows.Forms.TextBox();
+            this.txtAddr = new System.Windows.Forms.TextBox();
+            this.txtZipCode = new System.Windows.Forms.TextBox();
+            this.lblPoint = new System.Windows.Forms.Label();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(551, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 150);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "추가";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(551, 54);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 150);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnRemove
             // 
-            this.button2.Location = new System.Drawing.Point(551, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 75);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "제거";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(551, 219);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 75);
+            this.btnRemove.TabIndex = 1;
+            this.btnRemove.Text = "제거";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.Location = new System.Drawing.Point(551, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 69);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "초기화";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(551, 300);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 69);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "초기화";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.lblPoint);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
@@ -125,9 +120,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 12);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 3;
-            this.label2.Text = "사용가능 : 0000원";
+            this.label2.Text = "사용가능 : ";
             // 
             // radioButton2
             // 
@@ -140,15 +135,6 @@
             this.radioButton2.Text = "카드";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(609, 376);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "원";
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -160,23 +146,33 @@
             this.radioButton1.Text = "현금";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // label1
             // 
-            this.button4.Location = new System.Drawing.Point(551, 440);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 69);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "취소";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(609, 376);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "원";
             // 
-            // button5
+            // btnCancel
             // 
-            this.button5.Location = new System.Drawing.Point(469, 440);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 69);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "등록";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(551, 440);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 69);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(469, 440);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 69);
+            this.btnInsert.TabIndex = 1;
+            this.btnInsert.Text = "등록";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -188,15 +184,15 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "고객명";
             // 
-            // checkBox1
+            // cboShipping
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(373, 398);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 16);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "택배신청";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cboShipping.AutoSize = true;
+            this.cboShipping.Location = new System.Drawing.Point(373, 398);
+            this.cboShipping.Name = "cboShipping";
+            this.cboShipping.Size = new System.Drawing.Size(72, 16);
+            this.cboShipping.TabIndex = 0;
+            this.cboShipping.Text = "택배신청";
+            this.cboShipping.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -207,83 +203,25 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "주소";
             // 
-            // dataGridView3
+            // dgvProduct
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column11});
-            this.dataGridView3.Location = new System.Drawing.Point(23, 54);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(522, 150);
-            this.dataGridView3.TabIndex = 16;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(23, 54);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowTemplate.Height = 23;
+            this.dgvProduct.Size = new System.Drawing.Size(522, 150);
+            this.dgvProduct.TabIndex = 16;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // Column6
+            // dgvCart
             // 
-            this.Column6.HeaderText = "no";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "제조사";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 80;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "제품명";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 250;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "판매가";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 80;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 219);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(522, 150);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "no";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "제품명";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "판매가";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "수량";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
+            this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Location = new System.Drawing.Point(22, 219);
+            this.dgvCart.Name = "dgvCart";
+            this.dgvCart.RowTemplate.Height = 23;
+            this.dgvCart.Size = new System.Drawing.Size(522, 150);
+            this.dgvCart.TabIndex = 16;
+            this.dgvCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // label6
             // 
@@ -294,73 +232,95 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "금액";
             // 
-            // button6
+            // btnSearchAddr
             // 
-            this.button6.Location = new System.Drawing.Point(232, 424);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 23);
-            this.button6.TabIndex = 55;
-            this.button6.Text = "주소찾기";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSearchAddr.Location = new System.Drawing.Point(232, 424);
+            this.btnSearchAddr.Name = "btnSearchAddr";
+            this.btnSearchAddr.Size = new System.Drawing.Size(103, 23);
+            this.btnSearchAddr.TabIndex = 55;
+            this.btnSearchAddr.Text = "주소찾기";
+            this.btnSearchAddr.UseVisualStyleBackColor = true;
+            this.btnSearchAddr.Click += new System.EventHandler(this.btnSearchAddr_Click);
             // 
-            // textBox2
+            // txtAddrDetail
             // 
-            this.textBox2.Location = new System.Drawing.Point(232, 480);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 21);
-            this.textBox2.TabIndex = 53;
+            this.txtAddrDetail.Location = new System.Drawing.Point(232, 480);
+            this.txtAddrDetail.Name = "txtAddrDetail";
+            this.txtAddrDetail.Size = new System.Drawing.Size(213, 21);
+            this.txtAddrDetail.TabIndex = 53;
             // 
-            // textBox8
+            // txtAddr
             // 
-            this.textBox8.Location = new System.Drawing.Point(232, 453);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(213, 21);
-            this.textBox8.TabIndex = 54;
+            this.txtAddr.Enabled = false;
+            this.txtAddr.Location = new System.Drawing.Point(232, 453);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(213, 21);
+            this.txtAddr.TabIndex = 54;
             // 
-            // textBox7
+            // txtZipCode
             // 
-            this.textBox7.Location = new System.Drawing.Point(345, 426);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 21);
-            this.textBox7.TabIndex = 52;
+            this.txtZipCode.Enabled = false;
+            this.txtZipCode.Location = new System.Drawing.Point(345, 426);
+            this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Size = new System.Drawing.Size(100, 21);
+            this.txtZipCode.TabIndex = 52;
+            // 
+            // lblPoint
+            // 
+            this.lblPoint.AutoSize = true;
+            this.lblPoint.Location = new System.Drawing.Point(113, 90);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(0, 12);
+            this.lblPoint.TabIndex = 3;
+            // 
+            // cboCategory
+            // 
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(447, 22);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(98, 20);
+            this.cboCategory.TabIndex = 56;
+            this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
             // frmRegSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 527);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.cboCategory);
+            this.Controls.Add(this.btnSearchAddr);
+            this.Controls.Add(this.txtAddrDetail);
+            this.Controls.Add(this.txtAddr);
+            this.Controls.Add(this.txtZipCode);
+            this.Controls.Add(this.dgvCart);
+            this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cboShipping);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAdd);
             this.Name = "frmRegSales";
             this.Text = "판매 등록";
+            this.Load += new System.EventHandler(this.frmRegSales_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
@@ -368,25 +328,19 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cboShipping;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.DataGridView dgvCart;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btnSearchAddr;
+        private System.Windows.Forms.TextBox txtAddrDetail;
+        private System.Windows.Forms.TextBox txtAddr;
+        private System.Windows.Forms.TextBox txtZipCode;
+        private System.Windows.Forms.Label lblPoint;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }

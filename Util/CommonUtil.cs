@@ -55,5 +55,34 @@ namespace 화면설계
             cmd.Parameters.Add(param, type);
             cmd.Parameters[param].Value = value;
         }
+        public static void OpenCreateForm<T>() where T : Form, new()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            T frm = new T();
+            frm.Show();
+        }
+        public static void OpenCreateForm<T>(bool openMdi, Form mdiParent = null) where T : Form, new()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            T frm = new T();
+            frm.MdiParent = mdiParent;
+            frm.Show();
+        }
     }
 }

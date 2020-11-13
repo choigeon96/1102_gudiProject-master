@@ -72,7 +72,7 @@
             this.txtName.Location = new System.Drawing.Point(84, 20);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(83, 21);
-            this.txtName.TabIndex = 35;
+            this.txtName.TabIndex = 1;
             // 
             // dtpBirth
             // 
@@ -96,7 +96,7 @@
             this.txtMobile1.Location = new System.Drawing.Point(84, 58);
             this.txtMobile1.Name = "txtMobile1";
             this.txtMobile1.Size = new System.Drawing.Size(41, 21);
-            this.txtMobile1.TabIndex = 37;
+            this.txtMobile1.TabIndex = 2;
             // 
             // label7
             // 
@@ -112,7 +112,7 @@
             this.txtMobile2.Location = new System.Drawing.Point(131, 58);
             this.txtMobile2.Name = "txtMobile2";
             this.txtMobile2.Size = new System.Drawing.Size(166, 21);
-            this.txtMobile2.TabIndex = 38;
+            this.txtMobile2.TabIndex = 3;
             // 
             // label5
             // 

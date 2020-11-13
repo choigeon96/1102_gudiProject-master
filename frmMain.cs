@@ -84,7 +84,8 @@ namespace 화면설계
 
         private void btnRegProduct_Click(object sender, EventArgs e)
         {
-
+            frmRegProduct frm = new frmRegProduct();
+            frm.Show();
         }
 
         private void btnMemberInfo_Click(object sender, EventArgs e)
@@ -94,6 +95,17 @@ namespace 화면설계
             frmMember.MdiParent = this;
             frmMember.Show();
 
+        }
+
+        private void btnNewMember_Click(object sender, EventArgs e)
+        {
+            frmRegMember frm = new frmRegMember();
+            frm.ShowDialog();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            login.Close();
         }
     }
 }

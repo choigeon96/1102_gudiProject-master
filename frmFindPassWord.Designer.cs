@@ -75,7 +75,8 @@
             this.txtEmail.Location = new System.Drawing.Point(90, 55);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(132, 21);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // btnSend
             // 

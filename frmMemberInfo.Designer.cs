@@ -111,6 +111,7 @@
             this.btnNewSales = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.libVisitDate = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -170,6 +171,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnNewSales);
             this.splitContainer1.Panel2.Controls.Add(this.btnSearch);
             this.splitContainer1.Panel2.Controls.Add(this.libVisitDate);
+            this.splitContainer1.Panel2.Controls.Add(this.label8);
             this.splitContainer1.Panel2.Controls.Add(this.label34);
             this.splitContainer1.Size = new System.Drawing.Size(1245, 489);
             this.splitContainer1.SplitterDistance = 339;
@@ -547,113 +549,161 @@
             // 
             // txtOSPRISM
             // 
+            this.txtOSPRISM.BackColor = System.Drawing.Color.White;
+            this.txtOSPRISM.Enabled = false;
             this.txtOSPRISM.Location = new System.Drawing.Point(592, 32);
             this.txtOSPRISM.Name = "txtOSPRISM";
+            this.txtOSPRISM.ReadOnly = true;
             this.txtOSPRISM.Size = new System.Drawing.Size(41, 21);
             this.txtOSPRISM.TabIndex = 107;
             // 
             // txtODPRISM
             // 
+            this.txtODPRISM.BackColor = System.Drawing.Color.White;
+            this.txtODPRISM.Enabled = false;
             this.txtODPRISM.Location = new System.Drawing.Point(592, 61);
             this.txtODPRISM.Name = "txtODPRISM";
+            this.txtODPRISM.ReadOnly = true;
             this.txtODPRISM.Size = new System.Drawing.Size(41, 21);
             this.txtODPRISM.TabIndex = 110;
             // 
             // txtOSOH
             // 
+            this.txtOSOH.BackColor = System.Drawing.Color.White;
+            this.txtOSOH.Enabled = false;
             this.txtOSOH.Location = new System.Drawing.Point(519, 32);
             this.txtOSOH.Name = "txtOSOH";
+            this.txtOSOH.ReadOnly = true;
             this.txtOSOH.Size = new System.Drawing.Size(41, 21);
             this.txtOSOH.TabIndex = 106;
             // 
             // txtODOH
             // 
+            this.txtODOH.BackColor = System.Drawing.Color.White;
+            this.txtODOH.Enabled = false;
             this.txtODOH.Location = new System.Drawing.Point(519, 61);
             this.txtODOH.Name = "txtODOH";
+            this.txtODOH.ReadOnly = true;
             this.txtODOH.Size = new System.Drawing.Size(41, 21);
             this.txtODOH.TabIndex = 105;
             // 
             // txtOSSPH
             // 
+            this.txtOSSPH.BackColor = System.Drawing.Color.White;
+            this.txtOSSPH.Enabled = false;
             this.txtOSSPH.Location = new System.Drawing.Point(81, 32);
             this.txtOSSPH.Name = "txtOSSPH";
+            this.txtOSSPH.ReadOnly = true;
             this.txtOSSPH.Size = new System.Drawing.Size(41, 21);
             this.txtOSSPH.TabIndex = 94;
             // 
             // txtOSClosePD
             // 
+            this.txtOSClosePD.BackColor = System.Drawing.Color.White;
+            this.txtOSClosePD.Enabled = false;
             this.txtOSClosePD.Location = new System.Drawing.Point(446, 32);
             this.txtOSClosePD.Name = "txtOSClosePD";
+            this.txtOSClosePD.ReadOnly = true;
             this.txtOSClosePD.Size = new System.Drawing.Size(41, 21);
             this.txtOSClosePD.TabIndex = 104;
             // 
             // txtODSPH
             // 
+            this.txtODSPH.BackColor = System.Drawing.Color.White;
+            this.txtODSPH.Enabled = false;
             this.txtODSPH.Location = new System.Drawing.Point(81, 61);
             this.txtODSPH.Name = "txtODSPH";
+            this.txtODSPH.ReadOnly = true;
             this.txtODSPH.Size = new System.Drawing.Size(41, 21);
             this.txtODSPH.TabIndex = 93;
             // 
             // txtOSCYL
             // 
+            this.txtOSCYL.BackColor = System.Drawing.Color.White;
+            this.txtOSCYL.Enabled = false;
             this.txtOSCYL.Location = new System.Drawing.Point(154, 32);
             this.txtOSCYL.Name = "txtOSCYL";
+            this.txtOSCYL.ReadOnly = true;
             this.txtOSCYL.Size = new System.Drawing.Size(41, 21);
             this.txtOSCYL.TabIndex = 96;
             // 
             // txtODClosePD
             // 
+            this.txtODClosePD.BackColor = System.Drawing.Color.White;
+            this.txtODClosePD.Enabled = false;
             this.txtODClosePD.Location = new System.Drawing.Point(446, 61);
             this.txtODClosePD.Name = "txtODClosePD";
+            this.txtODClosePD.ReadOnly = true;
             this.txtODClosePD.Size = new System.Drawing.Size(41, 21);
             this.txtODClosePD.TabIndex = 103;
             // 
             // txtOSADD
             // 
+            this.txtOSADD.BackColor = System.Drawing.Color.White;
+            this.txtOSADD.Enabled = false;
             this.txtOSADD.Location = new System.Drawing.Point(373, 32);
             this.txtOSADD.Name = "txtOSADD";
+            this.txtOSADD.ReadOnly = true;
             this.txtOSADD.Size = new System.Drawing.Size(41, 21);
             this.txtOSADD.TabIndex = 102;
             // 
             // txtODCYL
             // 
+            this.txtODCYL.BackColor = System.Drawing.Color.White;
+            this.txtODCYL.Enabled = false;
             this.txtODCYL.Location = new System.Drawing.Point(154, 61);
             this.txtODCYL.Name = "txtODCYL";
+            this.txtODCYL.ReadOnly = true;
             this.txtODCYL.Size = new System.Drawing.Size(41, 21);
             this.txtODCYL.TabIndex = 95;
             // 
             // txtOSAXIS
             // 
+            this.txtOSAXIS.BackColor = System.Drawing.Color.White;
+            this.txtOSAXIS.Enabled = false;
             this.txtOSAXIS.Location = new System.Drawing.Point(227, 32);
             this.txtOSAXIS.Name = "txtOSAXIS";
+            this.txtOSAXIS.ReadOnly = true;
             this.txtOSAXIS.Size = new System.Drawing.Size(41, 21);
             this.txtOSAXIS.TabIndex = 98;
             // 
             // txtODADD
             // 
+            this.txtODADD.BackColor = System.Drawing.Color.White;
+            this.txtODADD.Enabled = false;
             this.txtODADD.Location = new System.Drawing.Point(373, 61);
             this.txtODADD.Name = "txtODADD";
+            this.txtODADD.ReadOnly = true;
             this.txtODADD.Size = new System.Drawing.Size(41, 21);
             this.txtODADD.TabIndex = 101;
             // 
             // txtOSFarPD
             // 
+            this.txtOSFarPD.BackColor = System.Drawing.Color.White;
+            this.txtOSFarPD.Enabled = false;
             this.txtOSFarPD.Location = new System.Drawing.Point(300, 32);
             this.txtOSFarPD.Name = "txtOSFarPD";
+            this.txtOSFarPD.ReadOnly = true;
             this.txtOSFarPD.Size = new System.Drawing.Size(41, 21);
             this.txtOSFarPD.TabIndex = 99;
             // 
             // txtODAXIS
             // 
+            this.txtODAXIS.BackColor = System.Drawing.Color.White;
+            this.txtODAXIS.Enabled = false;
             this.txtODAXIS.Location = new System.Drawing.Point(227, 61);
             this.txtODAXIS.Name = "txtODAXIS";
+            this.txtODAXIS.ReadOnly = true;
             this.txtODAXIS.Size = new System.Drawing.Size(41, 21);
             this.txtODAXIS.TabIndex = 97;
             // 
             // txtODFarPD
             // 
+            this.txtODFarPD.BackColor = System.Drawing.Color.White;
+            this.txtODFarPD.Enabled = false;
             this.txtODFarPD.Location = new System.Drawing.Point(300, 61);
             this.txtODFarPD.Name = "txtODFarPD";
+            this.txtODFarPD.ReadOnly = true;
             this.txtODFarPD.Size = new System.Drawing.Size(41, 21);
             this.txtODFarPD.TabIndex = 100;
             // 
@@ -769,6 +819,8 @@
             // 
             // txtOSSPH_L
             // 
+            this.txtOSSPH_L.BackColor = System.Drawing.Color.White;
+            this.txtOSSPH_L.Enabled = false;
             this.txtOSSPH_L.Location = new System.Drawing.Point(81, 32);
             this.txtOSSPH_L.Name = "txtOSSPH_L";
             this.txtOSSPH_L.Size = new System.Drawing.Size(41, 21);
@@ -776,6 +828,8 @@
             // 
             // txtOSKERATO
             // 
+            this.txtOSKERATO.BackColor = System.Drawing.Color.White;
+            this.txtOSKERATO.Enabled = false;
             this.txtOSKERATO.Location = new System.Drawing.Point(511, 32);
             this.txtOSKERATO.Name = "txtOSKERATO";
             this.txtOSKERATO.Size = new System.Drawing.Size(41, 21);
@@ -783,6 +837,8 @@
             // 
             // txtODSPH_L
             // 
+            this.txtODSPH_L.BackColor = System.Drawing.Color.White;
+            this.txtODSPH_L.Enabled = false;
             this.txtODSPH_L.Location = new System.Drawing.Point(81, 61);
             this.txtODSPH_L.Name = "txtODSPH_L";
             this.txtODSPH_L.Size = new System.Drawing.Size(41, 21);
@@ -790,6 +846,8 @@
             // 
             // txtOSCYL_L
             // 
+            this.txtOSCYL_L.BackColor = System.Drawing.Color.White;
+            this.txtOSCYL_L.Enabled = false;
             this.txtOSCYL_L.Location = new System.Drawing.Point(167, 32);
             this.txtOSCYL_L.Name = "txtOSCYL_L";
             this.txtOSCYL_L.Size = new System.Drawing.Size(41, 21);
@@ -797,6 +855,8 @@
             // 
             // txtODKERATO
             // 
+            this.txtODKERATO.BackColor = System.Drawing.Color.White;
+            this.txtODKERATO.Enabled = false;
             this.txtODKERATO.Location = new System.Drawing.Point(511, 61);
             this.txtODKERATO.Name = "txtODKERATO";
             this.txtODKERATO.Size = new System.Drawing.Size(41, 21);
@@ -804,6 +864,8 @@
             // 
             // txtOSDIA
             // 
+            this.txtOSDIA.BackColor = System.Drawing.Color.White;
+            this.txtOSDIA.Enabled = false;
             this.txtOSDIA.Location = new System.Drawing.Point(425, 32);
             this.txtOSDIA.Name = "txtOSDIA";
             this.txtOSDIA.Size = new System.Drawing.Size(41, 21);
@@ -811,6 +873,8 @@
             // 
             // txtODCYL_L
             // 
+            this.txtODCYL_L.BackColor = System.Drawing.Color.White;
+            this.txtODCYL_L.Enabled = false;
             this.txtODCYL_L.Location = new System.Drawing.Point(167, 61);
             this.txtODCYL_L.Name = "txtODCYL_L";
             this.txtODCYL_L.Size = new System.Drawing.Size(41, 21);
@@ -818,6 +882,8 @@
             // 
             // txtOSADD_L
             // 
+            this.txtOSADD_L.BackColor = System.Drawing.Color.White;
+            this.txtOSADD_L.Enabled = false;
             this.txtOSADD_L.Location = new System.Drawing.Point(253, 32);
             this.txtOSADD_L.Name = "txtOSADD_L";
             this.txtOSADD_L.Size = new System.Drawing.Size(41, 21);
@@ -825,6 +891,8 @@
             // 
             // txtODDIA
             // 
+            this.txtODDIA.BackColor = System.Drawing.Color.White;
+            this.txtODDIA.Enabled = false;
             this.txtODDIA.Location = new System.Drawing.Point(425, 61);
             this.txtODDIA.Name = "txtODDIA";
             this.txtODDIA.Size = new System.Drawing.Size(41, 21);
@@ -832,6 +900,8 @@
             // 
             // txtOSBC
             // 
+            this.txtOSBC.BackColor = System.Drawing.Color.White;
+            this.txtOSBC.Enabled = false;
             this.txtOSBC.Location = new System.Drawing.Point(339, 32);
             this.txtOSBC.Name = "txtOSBC";
             this.txtOSBC.Size = new System.Drawing.Size(41, 21);
@@ -839,6 +909,8 @@
             // 
             // txtODADD_L
             // 
+            this.txtODADD_L.BackColor = System.Drawing.Color.White;
+            this.txtODADD_L.Enabled = false;
             this.txtODADD_L.Location = new System.Drawing.Point(253, 61);
             this.txtODADD_L.Name = "txtODADD_L";
             this.txtODADD_L.Size = new System.Drawing.Size(41, 21);
@@ -846,6 +918,8 @@
             // 
             // txtODBC
             // 
+            this.txtODBC.BackColor = System.Drawing.Color.White;
+            this.txtODBC.Enabled = false;
             this.txtODBC.Location = new System.Drawing.Point(339, 61);
             this.txtODBC.Name = "txtODBC";
             this.txtODBC.Size = new System.Drawing.Size(41, 21);
@@ -905,11 +979,20 @@
             // 
             this.libVisitDate.FormattingEnabled = true;
             this.libVisitDate.ItemHeight = 12;
-            this.libVisitDate.Location = new System.Drawing.Point(698, 127);
+            this.libVisitDate.Location = new System.Drawing.Point(698, 123);
             this.libVisitDate.Name = "libVisitDate";
             this.libVisitDate.Size = new System.Drawing.Size(185, 88);
             this.libVisitDate.TabIndex = 71;
             this.libVisitDate.SelectedIndexChanged += new System.EventHandler(this.libVisitDate_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 220);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "매출정보";
             // 
             // label34
             // 
@@ -928,7 +1011,7 @@
             this.ClientSize = new System.Drawing.Size(1245, 489);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmMemberInfo";
-            this.Text = "frmMemberInfo";
+            this.Text = "회원정보";
             this.Load += new System.EventHandler(this.frmMemberInfo_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -1032,5 +1115,6 @@
         private System.Windows.Forms.TextBox txtODADD_L;
         private System.Windows.Forms.TextBox txtODBC;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label8;
     }
 }

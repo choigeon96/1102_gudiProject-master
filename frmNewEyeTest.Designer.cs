@@ -33,7 +33,6 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.txtODAXIS = new System.Windows.Forms.TextBox();
             this.txtODFarPD = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -156,35 +156,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "안경";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.txtOSSPH_L);
-            this.groupBox2.Controls.Add(this.txtOSKERATO);
-            this.groupBox2.Controls.Add(this.txtODSPH_L);
-            this.groupBox2.Controls.Add(this.txtOSCYL_L);
-            this.groupBox2.Controls.Add(this.txtODKERATO);
-            this.groupBox2.Controls.Add(this.txtOSDIA);
-            this.groupBox2.Controls.Add(this.txtODCYL_L);
-            this.groupBox2.Controls.Add(this.txtOSADD_L);
-            this.groupBox2.Controls.Add(this.txtODDIA);
-            this.groupBox2.Controls.Add(this.txtOSBC);
-            this.groupBox2.Controls.Add(this.txtODADD_L);
-            this.groupBox2.Controls.Add(this.txtODBC);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Location = new System.Drawing.Point(8, 112);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(626, 90);
-            this.groupBox2.TabIndex = 169;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "렌즈";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -272,112 +243,112 @@
             this.txtOSPRISM.Location = new System.Drawing.Point(571, 30);
             this.txtOSPRISM.Name = "txtOSPRISM";
             this.txtOSPRISM.Size = new System.Drawing.Size(41, 21);
-            this.txtOSPRISM.TabIndex = 135;
+            this.txtOSPRISM.TabIndex = 8;
             // 
             // txtODPRISM
             // 
             this.txtODPRISM.Location = new System.Drawing.Point(571, 59);
             this.txtODPRISM.Name = "txtODPRISM";
             this.txtODPRISM.Size = new System.Drawing.Size(41, 21);
-            this.txtODPRISM.TabIndex = 136;
+            this.txtODPRISM.TabIndex = 16;
             // 
             // txtOSOH
             // 
             this.txtOSOH.Location = new System.Drawing.Point(498, 30);
             this.txtOSOH.Name = "txtOSOH";
             this.txtOSOH.Size = new System.Drawing.Size(41, 21);
-            this.txtOSOH.TabIndex = 134;
+            this.txtOSOH.TabIndex = 7;
             // 
             // txtODOH
             // 
             this.txtODOH.Location = new System.Drawing.Point(498, 59);
             this.txtODOH.Name = "txtODOH";
             this.txtODOH.Size = new System.Drawing.Size(41, 21);
-            this.txtODOH.TabIndex = 133;
+            this.txtODOH.TabIndex = 15;
             // 
             // txtOSSPH
             // 
             this.txtOSSPH.Location = new System.Drawing.Point(60, 30);
             this.txtOSSPH.Name = "txtOSSPH";
             this.txtOSSPH.Size = new System.Drawing.Size(41, 21);
-            this.txtOSSPH.TabIndex = 122;
+            this.txtOSSPH.TabIndex = 1;
             // 
             // txtOSClosePD
             // 
             this.txtOSClosePD.Location = new System.Drawing.Point(425, 30);
             this.txtOSClosePD.Name = "txtOSClosePD";
             this.txtOSClosePD.Size = new System.Drawing.Size(41, 21);
-            this.txtOSClosePD.TabIndex = 132;
+            this.txtOSClosePD.TabIndex = 6;
             // 
             // txtODSPH
             // 
             this.txtODSPH.Location = new System.Drawing.Point(60, 59);
             this.txtODSPH.Name = "txtODSPH";
             this.txtODSPH.Size = new System.Drawing.Size(41, 21);
-            this.txtODSPH.TabIndex = 121;
+            this.txtODSPH.TabIndex = 9;
             // 
             // txtOSCYL
             // 
             this.txtOSCYL.Location = new System.Drawing.Point(133, 30);
             this.txtOSCYL.Name = "txtOSCYL";
             this.txtOSCYL.Size = new System.Drawing.Size(41, 21);
-            this.txtOSCYL.TabIndex = 124;
+            this.txtOSCYL.TabIndex = 2;
             // 
             // txtODClosePD
             // 
             this.txtODClosePD.Location = new System.Drawing.Point(425, 59);
             this.txtODClosePD.Name = "txtODClosePD";
             this.txtODClosePD.Size = new System.Drawing.Size(41, 21);
-            this.txtODClosePD.TabIndex = 131;
+            this.txtODClosePD.TabIndex = 14;
             // 
             // txtOSADD
             // 
             this.txtOSADD.Location = new System.Drawing.Point(352, 30);
             this.txtOSADD.Name = "txtOSADD";
             this.txtOSADD.Size = new System.Drawing.Size(41, 21);
-            this.txtOSADD.TabIndex = 130;
+            this.txtOSADD.TabIndex = 5;
             // 
             // txtODCYL
             // 
             this.txtODCYL.Location = new System.Drawing.Point(133, 59);
             this.txtODCYL.Name = "txtODCYL";
             this.txtODCYL.Size = new System.Drawing.Size(41, 21);
-            this.txtODCYL.TabIndex = 123;
+            this.txtODCYL.TabIndex = 10;
             // 
             // txtOSAXIS
             // 
             this.txtOSAXIS.Location = new System.Drawing.Point(206, 30);
             this.txtOSAXIS.Name = "txtOSAXIS";
             this.txtOSAXIS.Size = new System.Drawing.Size(41, 21);
-            this.txtOSAXIS.TabIndex = 126;
+            this.txtOSAXIS.TabIndex = 3;
             // 
             // txtODADD
             // 
             this.txtODADD.Location = new System.Drawing.Point(352, 59);
             this.txtODADD.Name = "txtODADD";
             this.txtODADD.Size = new System.Drawing.Size(41, 21);
-            this.txtODADD.TabIndex = 129;
+            this.txtODADD.TabIndex = 13;
             // 
             // txtOSFarPD
             // 
             this.txtOSFarPD.Location = new System.Drawing.Point(279, 30);
             this.txtOSFarPD.Name = "txtOSFarPD";
             this.txtOSFarPD.Size = new System.Drawing.Size(41, 21);
-            this.txtOSFarPD.TabIndex = 127;
+            this.txtOSFarPD.TabIndex = 4;
             // 
             // txtODAXIS
             // 
             this.txtODAXIS.Location = new System.Drawing.Point(206, 59);
             this.txtODAXIS.Name = "txtODAXIS";
             this.txtODAXIS.Size = new System.Drawing.Size(41, 21);
-            this.txtODAXIS.TabIndex = 125;
+            this.txtODAXIS.TabIndex = 11;
             // 
             // txtODFarPD
             // 
             this.txtODFarPD.Location = new System.Drawing.Point(279, 59);
             this.txtODFarPD.Name = "txtODFarPD";
             this.txtODFarPD.Size = new System.Drawing.Size(41, 21);
-            this.txtODFarPD.TabIndex = 128;
+            this.txtODFarPD.TabIndex = 12;
             // 
             // label33
             // 
@@ -388,6 +359,35 @@
             this.label33.Size = new System.Drawing.Size(22, 12);
             this.label33.TabIndex = 119;
             this.label33.Text = "OS";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.txtOSSPH_L);
+            this.groupBox2.Controls.Add(this.txtOSKERATO);
+            this.groupBox2.Controls.Add(this.txtODSPH_L);
+            this.groupBox2.Controls.Add(this.txtOSCYL_L);
+            this.groupBox2.Controls.Add(this.txtODKERATO);
+            this.groupBox2.Controls.Add(this.txtOSDIA);
+            this.groupBox2.Controls.Add(this.txtODCYL_L);
+            this.groupBox2.Controls.Add(this.txtOSADD_L);
+            this.groupBox2.Controls.Add(this.txtODDIA);
+            this.groupBox2.Controls.Add(this.txtOSBC);
+            this.groupBox2.Controls.Add(this.txtODADD_L);
+            this.groupBox2.Controls.Add(this.txtODBC);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Location = new System.Drawing.Point(8, 112);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(626, 90);
+            this.groupBox2.TabIndex = 169;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "렌즈";
             // 
             // label9
             // 
@@ -464,84 +464,84 @@
             this.txtOSSPH_L.Location = new System.Drawing.Point(60, 26);
             this.txtOSSPH_L.Name = "txtOSSPH_L";
             this.txtOSSPH_L.Size = new System.Drawing.Size(41, 21);
-            this.txtOSSPH_L.TabIndex = 147;
+            this.txtOSSPH_L.TabIndex = 17;
             // 
             // txtOSKERATO
             // 
             this.txtOSKERATO.Location = new System.Drawing.Point(490, 26);
             this.txtOSKERATO.Name = "txtOSKERATO";
             this.txtOSKERATO.Size = new System.Drawing.Size(41, 21);
-            this.txtOSKERATO.TabIndex = 157;
+            this.txtOSKERATO.TabIndex = 22;
             // 
             // txtODSPH_L
             // 
             this.txtODSPH_L.Location = new System.Drawing.Point(60, 55);
             this.txtODSPH_L.Name = "txtODSPH_L";
             this.txtODSPH_L.Size = new System.Drawing.Size(41, 21);
-            this.txtODSPH_L.TabIndex = 146;
+            this.txtODSPH_L.TabIndex = 23;
             // 
             // txtOSCYL_L
             // 
             this.txtOSCYL_L.Location = new System.Drawing.Point(146, 26);
             this.txtOSCYL_L.Name = "txtOSCYL_L";
             this.txtOSCYL_L.Size = new System.Drawing.Size(41, 21);
-            this.txtOSCYL_L.TabIndex = 149;
+            this.txtOSCYL_L.TabIndex = 18;
             // 
             // txtODKERATO
             // 
             this.txtODKERATO.Location = new System.Drawing.Point(490, 55);
             this.txtODKERATO.Name = "txtODKERATO";
             this.txtODKERATO.Size = new System.Drawing.Size(41, 21);
-            this.txtODKERATO.TabIndex = 156;
+            this.txtODKERATO.TabIndex = 28;
             // 
             // txtOSDIA
             // 
             this.txtOSDIA.Location = new System.Drawing.Point(404, 26);
             this.txtOSDIA.Name = "txtOSDIA";
             this.txtOSDIA.Size = new System.Drawing.Size(41, 21);
-            this.txtOSDIA.TabIndex = 155;
+            this.txtOSDIA.TabIndex = 21;
             // 
             // txtODCYL_L
             // 
             this.txtODCYL_L.Location = new System.Drawing.Point(146, 55);
             this.txtODCYL_L.Name = "txtODCYL_L";
             this.txtODCYL_L.Size = new System.Drawing.Size(41, 21);
-            this.txtODCYL_L.TabIndex = 148;
+            this.txtODCYL_L.TabIndex = 24;
             // 
             // txtOSADD_L
             // 
             this.txtOSADD_L.Location = new System.Drawing.Point(232, 26);
             this.txtOSADD_L.Name = "txtOSADD_L";
             this.txtOSADD_L.Size = new System.Drawing.Size(41, 21);
-            this.txtOSADD_L.TabIndex = 151;
+            this.txtOSADD_L.TabIndex = 19;
             // 
             // txtODDIA
             // 
             this.txtODDIA.Location = new System.Drawing.Point(404, 55);
             this.txtODDIA.Name = "txtODDIA";
             this.txtODDIA.Size = new System.Drawing.Size(41, 21);
-            this.txtODDIA.TabIndex = 154;
+            this.txtODDIA.TabIndex = 27;
             // 
             // txtOSBC
             // 
             this.txtOSBC.Location = new System.Drawing.Point(318, 26);
             this.txtOSBC.Name = "txtOSBC";
             this.txtOSBC.Size = new System.Drawing.Size(41, 21);
-            this.txtOSBC.TabIndex = 152;
+            this.txtOSBC.TabIndex = 20;
             // 
             // txtODADD_L
             // 
             this.txtODADD_L.Location = new System.Drawing.Point(232, 55);
             this.txtODADD_L.Name = "txtODADD_L";
             this.txtODADD_L.Size = new System.Drawing.Size(41, 21);
-            this.txtODADD_L.TabIndex = 150;
+            this.txtODADD_L.TabIndex = 25;
             // 
             // txtODBC
             // 
             this.txtODBC.Location = new System.Drawing.Point(318, 55);
             this.txtODBC.Name = "txtODBC";
             this.txtODBC.Size = new System.Drawing.Size(41, 21);
-            this.txtODBC.TabIndex = 153;
+            this.txtODBC.TabIndex = 26;
             // 
             // label20
             // 

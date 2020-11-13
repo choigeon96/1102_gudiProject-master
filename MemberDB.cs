@@ -19,8 +19,8 @@ namespace 화면설계
         public string ZipCode { get; set; }
         public string Addr { get; set; }
         public string AddrDetail { get; set; }
-        public int Mobile1 { get; set; }
-        public int Mobile2 { get; set; }
+        public string Mobile1 { get; set; }
+        public string Mobile2 { get; set; }
         public DateTime Birth { get; set; }
     }
     public class MemberDB:IDisposable
@@ -44,8 +44,8 @@ namespace 화면설계
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             CommonUtil.AddParameter(cmd, "@Name", member.Name);
             CommonUtil.AddParameter(cmd, "@Gender", member.Gender);
-            CommonUtil.AddParameter(cmd, "@Mobile1", member.Mobile1,MySqlDbType.Int32);
-            CommonUtil.AddParameter(cmd, "@Mobile2", member.Mobile2, MySqlDbType.Int32);
+            CommonUtil.AddParameter(cmd, "@Mobile1", member.Mobile1);
+            CommonUtil.AddParameter(cmd, "@Mobile2", member.Mobile2);
             CommonUtil.AddParameter(cmd, "@Job", member.Job);
             CommonUtil.AddParameter(cmd, "@reg_date", DateTime.Now,MySqlDbType.Date);
             CommonUtil.AddParameter(cmd, "@birth_date", member.Birth,MySqlDbType.Date);
@@ -92,8 +92,8 @@ namespace 화면설계
                            where member_no = @memberNo";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             CommonUtil.AddParameter(cmd, "@member_name", member.Name);
-            CommonUtil.AddParameter(cmd, "@mobile1", member.Mobile1, MySqlDbType.Int32);
-            CommonUtil.AddParameter(cmd, "@mobile2", member.Mobile2, MySqlDbType.Int32);
+            CommonUtil.AddParameter(cmd, "@mobile1", member.Mobile1);
+            CommonUtil.AddParameter(cmd, "@mobile2", member.Mobile2);
             CommonUtil.AddParameter(cmd, "@zipcode", member.ZipCode);
             CommonUtil.AddParameter(cmd, "@addr1", member.Addr);
             CommonUtil.AddParameter(cmd, "@addr2", member.AddrDetail);

@@ -156,5 +156,13 @@ namespace 화면설계
                 db.Dispose();
             }
         }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                btnSend.PerformClick();
+            }
+        }
     }
 }

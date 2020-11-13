@@ -59,7 +59,18 @@ namespace 화면설계
             return dt;
         }
 
-       
+        public DataTable GetAllProductData()
+        {
+            DataTable dt = new DataTable();
+            string sql = @"select product_no, product_name, manufacture, category, purchase_price, selling_price, distributor 
+                           from product;";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+           
+            da.Fill(dt);
+            return dt;
+        }
+
+
         public bool Insert(Product prod)
         {
             string sql = @"insert into product (product_name, manufacture, category, purchase_price, selling_price, distributor, amount)

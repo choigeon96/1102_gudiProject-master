@@ -57,5 +57,13 @@ namespace 화면설계
             frm.ShowDialog();
             this.Close();
         }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                btnSearch.PerformClick();
+            }
+        }
     }
 }

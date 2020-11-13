@@ -107,7 +107,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Name = "frmMemberSearch";
-            this.Text = "frmMemberSearch";
+            this.Text = "회원검색";
             this.Load += new System.EventHandler(this.frmMemberSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.ResumeLayout(false);

@@ -34,8 +34,8 @@ namespace 화면설계
                 this.ID = frm.txtEmpID.Text;
                 this.Name = frm.txtEmpName.Text;
                 this.HireDate = frm.dtpHireDate.Text;
-                this.mobile1 = frm.cmbFMobile.Text;
-                this.mobile2 = frm.txtBMobile.Text;
+                this.mobile1 = frm.txtMobile1.Text;
+                this.mobile2 = frm.txtMobile2.Text;
                 this.BirthDate = frm.dtpBirthDate.Text;
                 this.Title = frm.cmbTitle.Text;
                 this.Password = frm.txtPwd.Text;
@@ -90,8 +90,8 @@ namespace 화면설계
             txtEmpName.Text = dt.Rows[e.RowIndex]["emp_name"].ToString();
             dtpBirthDate.Value = Convert.ToDateTime(dt.Rows[e.RowIndex]["birth_date"]);
             dtpHireDate.Value = Convert.ToDateTime(dt.Rows[e.RowIndex]["hire_date"]);
-            cmbFMobile.Text = dt.Rows[e.RowIndex]["mobile1"].ToString();
-            txtBMobile.Text = dt.Rows[e.RowIndex]["mobile2"].ToString();
+            txtMobile1.Text = dt.Rows[e.RowIndex]["mobile1"].ToString();
+            txtMobile2.Text = dt.Rows[e.RowIndex]["mobile2"].ToString();
             cmbTitle.Text = dt.Rows[e.RowIndex]["title"].ToString();
             txtPostalCode.Text = dt.Rows[e.RowIndex]["addr1"].ToString();
             txtAddr.Text = dt.Rows[e.RowIndex]["addr2"].ToString();

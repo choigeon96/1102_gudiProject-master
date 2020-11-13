@@ -33,7 +33,6 @@ namespace 화면설계
             CommonUtil.AddGridTextColumn(dgvProduct, "매입가", "purchase_price", 80, true, DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgvProduct, "판매가", "selling_price", 80, true, DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgvProduct, "거래처", "distributor", 80);
-            LoadProductData();
             CodeDB code = new CodeDB();
             string[] codes = { "상품분류", "제조사", "거래처" };
             DataSet ds = code.GetCommonCode(codes);
@@ -41,6 +40,7 @@ namespace 화면설계
             CommonUtil.BindingComboBox(cmbCategory, ds.Tables["상품분류"], "code", "name");
             CommonUtil.BindingComboBox(cmbDistributor, ds.Tables["거래처"], "code", "name");
             CommonUtil.BindingComboBox(cmbManufacturer, ds.Tables["제조사"], "code", "name");
+            LoadProductData();
             code.Dispose();
             
         }

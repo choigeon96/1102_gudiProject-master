@@ -70,8 +70,7 @@ namespace 화면설계
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            frmRegSales regSales = new frmRegSales();
-            regSales.ShowDialog();
+            CommonUtil.OpenCreateForm<frmRegSales>();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -139,8 +138,8 @@ namespace 화면설계
                 MemberInfo member = new MemberInfo
                 {
                     Name = lblName.Text,
-                    Mobile1 = Convert.ToInt32(txtMobile1.Text),
-                    Mobile2 = Convert.ToInt32(txtMobile2.Text),
+                    Mobile1 = txtMobile1.Text,
+                    Mobile2 = txtMobile2.Text,
                     ZipCode = txtZipCode.Text,
                     Addr = txtAddr.Text,
                     AddrDetail = txtAddrDetail.Text
@@ -234,8 +233,11 @@ namespace 화면설계
                 ds.Tables[0].TableName = "glasses";
                 ds.Tables.Add(db.GetLensInfo(memberNo));
                 ds.Tables[1].TableName = "lens";
-
+                if (ds.Tables[0].Rows.Count==0)
+                    return;
                 DataRow glassOS = ds.Tables["glasses"].Rows[0];
+
+
                 txtOSSPH.Text = glassOS["SPH"].ToString();
                 txtOSCYL.Text = glassOS["CYL"].ToString();
                 txtOSAXIS.Text = glassOS["AXIS"].ToString();

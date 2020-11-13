@@ -34,8 +34,7 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.cmbTitle = new System.Windows.Forms.ComboBox();
-            this.cmbFMobile = new System.Windows.Forms.ComboBox();
-            this.txtBMobile = new System.Windows.Forms.TextBox();
+            this.txtMobile2 = new System.Windows.Forms.TextBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtEmpID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,8 +54,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.panControls = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMobile1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpInfo)).BeginInit();
             this.panControls.SuspendLayout();
             this.SuspendLayout();
@@ -117,27 +117,19 @@
             this.cmbTitle.Size = new System.Drawing.Size(99, 20);
             this.cmbTitle.TabIndex = 44;
             // 
-            // cmbFMobile
+            // txtMobile2
             // 
-            this.cmbFMobile.FormattingEnabled = true;
-            this.cmbFMobile.Location = new System.Drawing.Point(3, 171);
-            this.cmbFMobile.Name = "cmbFMobile";
-            this.cmbFMobile.Size = new System.Drawing.Size(53, 20);
-            this.cmbFMobile.TabIndex = 45;
-            // 
-            // txtBMobile
-            // 
-            this.txtBMobile.Location = new System.Drawing.Point(62, 170);
-            this.txtBMobile.Name = "txtBMobile";
-            this.txtBMobile.Size = new System.Drawing.Size(140, 21);
-            this.txtBMobile.TabIndex = 43;
+            this.txtMobile2.Location = new System.Drawing.Point(62, 170);
+            this.txtMobile2.Name = "txtMobile2";
+            this.txtMobile2.Size = new System.Drawing.Size(140, 21);
+            this.txtMobile2.TabIndex = 5;
             // 
             // txtPwd
             // 
             this.txtPwd.Location = new System.Drawing.Point(2, 46);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(100, 21);
-            this.txtPwd.TabIndex = 41;
+            this.txtPwd.TabIndex = 2;
             this.txtPwd.UseSystemPasswordChar = true;
             this.txtPwd.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
@@ -146,7 +138,7 @@
             this.txtEmpID.Location = new System.Drawing.Point(2, 8);
             this.txtEmpID.Name = "txtEmpID";
             this.txtEmpID.Size = new System.Drawing.Size(100, 21);
-            this.txtEmpID.TabIndex = 40;
+            this.txtEmpID.TabIndex = 1;
             // 
             // label8
             // 
@@ -225,7 +217,7 @@
             this.txtAddrDetail.Location = new System.Drawing.Point(2, 289);
             this.txtAddrDetail.Name = "txtAddrDetail";
             this.txtAddrDetail.Size = new System.Drawing.Size(200, 21);
-            this.txtAddrDetail.TabIndex = 53;
+            this.txtAddrDetail.TabIndex = 8;
             this.txtAddrDetail.TextChanged += new System.EventHandler(this.txtAddrDetail_TextChanged);
             // 
             // txtAddr
@@ -233,14 +225,14 @@
             this.txtAddr.Location = new System.Drawing.Point(2, 262);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.Size = new System.Drawing.Size(200, 21);
-            this.txtAddr.TabIndex = 54;
+            this.txtAddr.TabIndex = 7;
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(115, 235);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(87, 21);
-            this.txtPostalCode.TabIndex = 52;
+            this.txtPostalCode.TabIndex = 6;
             // 
             // label1
             // 
@@ -264,7 +256,7 @@
             this.txtEmpName.Location = new System.Drawing.Point(2, 76);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(100, 21);
-            this.txtEmpName.TabIndex = 41;
+            this.txtEmpName.TabIndex = 3;
             this.txtEmpName.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // btnClose
@@ -289,6 +281,7 @@
             // 
             // panControls
             // 
+            this.panControls.Controls.Add(this.txtMobile1);
             this.panControls.Controls.Add(this.cmbTitle);
             this.panControls.Controls.Add(this.txtEmpID);
             this.panControls.Controls.Add(this.txtPwd);
@@ -296,15 +289,22 @@
             this.panControls.Controls.Add(this.txtAddrDetail);
             this.panControls.Controls.Add(this.txtEmpName);
             this.panControls.Controls.Add(this.txtAddr);
-            this.panControls.Controls.Add(this.txtBMobile);
+            this.panControls.Controls.Add(this.txtMobile2);
             this.panControls.Controls.Add(this.txtPostalCode);
-            this.panControls.Controls.Add(this.cmbFMobile);
             this.panControls.Controls.Add(this.dtpBirthDate);
             this.panControls.Controls.Add(this.dtpHireDate);
             this.panControls.Location = new System.Drawing.Point(471, 4);
             this.panControls.Name = "panControls";
             this.panControls.Size = new System.Drawing.Size(209, 357);
             this.panControls.TabIndex = 57;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(3, 330);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 21);
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtAddrDetail_TextChanged);
             // 
             // label2
             // 
@@ -315,13 +315,12 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "e-mail";
             // 
-            // txtEmail
+            // txtMobile1
             // 
-            this.txtEmail.Location = new System.Drawing.Point(3, 330);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 21);
-            this.txtEmail.TabIndex = 53;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtAddrDetail_TextChanged);
+            this.txtMobile1.Location = new System.Drawing.Point(2, 170);
+            this.txtMobile1.Name = "txtMobile1";
+            this.txtMobile1.Size = new System.Drawing.Size(54, 21);
+            this.txtMobile1.TabIndex = 4;
             // 
             // frmEmpInfo
             // 
@@ -364,8 +363,7 @@
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.ComboBox cmbTitle;
-        private System.Windows.Forms.ComboBox cmbFMobile;
-        private System.Windows.Forms.TextBox txtBMobile;
+        private System.Windows.Forms.TextBox txtMobile2;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtEmpID;
         private System.Windows.Forms.Label label8;
@@ -387,5 +385,6 @@
         private System.Windows.Forms.Panel panControls;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtMobile1;
     }
 }

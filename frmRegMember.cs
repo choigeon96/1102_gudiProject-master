@@ -42,8 +42,8 @@ namespace 화면설계
                 ZipCode = txtZipCode.Text,
                 Addr = txtAddr.Text,
                 AddrDetail = txtAddrDetail.Text,
-                Mobile1 = Convert.ToInt32(txtMobile1.Text),
-                Mobile2 = Convert.ToInt32(txtMobile2.Text),
+                Mobile1 = txtMobile1.Text,
+                Mobile2 = txtMobile2.Text,
                 Birth = dtpBirth.Value
             };
             MemberDB db = new MemberDB();

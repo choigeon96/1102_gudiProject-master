@@ -26,23 +26,38 @@ namespace 화면설계
         private void frmRegProduct_Load(object sender, EventArgs e)
         {
             CommonUtil.SetInitGridView(dgvProduct);
-            CommonUtil.AddGridTextColumn(dgvProduct, "no", "product_no", 30,true,DataGridViewContentAlignment.MiddleCenter);
+            CommonUtil.AddGridTextColumn(dgvProduct, "no", "product_no", 30, true, DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgvProduct, "상품명", "product_name", 250, true, DataGridViewContentAlignment.MiddleCenter);
             CommonUtil.AddGridTextColumn(dgvProduct, "분류", "category", 80);
             CommonUtil.AddGridTextColumn(dgvProduct, "제조사", "manufacture", 80);
             CommonUtil.AddGridTextColumn(dgvProduct, "매입가", "purchase_price", 80, true, DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgvProduct, "판매가", "selling_price", 80, true, DataGridViewContentAlignment.MiddleRight);
             CommonUtil.AddGridTextColumn(dgvProduct, "거래처", "distributor", 80);
-            CodeDB code = new CodeDB();
-            string[] codes = { "상품분류", "제조사", "거래처" };
-            DataSet ds = code.GetCommonCode(codes);
-            CommonUtil.BindingComboBox(cmbSearch, ds.Tables["상품분류"], "code", "name");
-            CommonUtil.BindingComboBox(cmbCategory, ds.Tables["상품분류"], "code", "name");
-            CommonUtil.BindingComboBox(cmbDistributor, ds.Tables["거래처"], "code", "name");
-            CommonUtil.BindingComboBox(cmbManufacturer, ds.Tables["제조사"], "code", "name");
             LoadProductData();
+            CodeDB code = new CodeDB();
+            Dictionary<string, string> categoryList = code.GetCategory();
             code.Dispose();
-            
+            code = new CodeDB();
+            List<string> manufacturerList = code.GetManufacturer();
+            code.Dispose();
+            code = new CodeDB();
+            List<string> distributorList = code.GetDistributor();
+            code.Dispose();
+            foreach (string item in manufacturerList)
+            {
+                cmbManufacturer.Items.Add(item);
+            }
+            foreach (string item in distributorList)
+            {
+                cmbDistributor.Items.Add(item);
+            }
+
+            foreach (string item in categoryList.Keys)
+            {
+                cmbSearch.Items.Add(item);
+                cmbCategory.Items.Add(item);
+            }
+
         }
 
         private void LoadProductData()
@@ -50,7 +65,7 @@ namespace 화면설계
             ProductDB db = new ProductDB();
             dt = db.GetProductData("0");
             db.Dispose();
-            dgvProduct.DataSource = dt;
+            
         }
 
         private void cmbCategoryS_SelectedIndexChanged(object sender, EventArgs e)

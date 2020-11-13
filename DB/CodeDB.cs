@@ -35,7 +35,44 @@ namespace 화면설계
             }
             return ds;
         }
-        
+        public Dictionary<string, string> GetCategory()
+        {
+            Dictionary<string, string> codeList = new Dictionary<string, string>();
+            string sql = @"select name from commoncode where category = '상품분류'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                codeList.Add(reader[0].ToString(), reader[0].ToString());
+            }
+            return codeList;
+        }
+
+        internal List<string> GetDistributor()
+        {
+            List<string> codeList = new List<string>();
+            string sql = @"select name from commoncode where category = '거래처'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                codeList.Add(reader[0].ToString());
+            }
+            return codeList;
+        }
+
+        public List<string> GetManufacturer()
+        {
+            List<string> codeList = new List<string>();
+            string sql = @"select name from commoncode where category = '제조사'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                codeList.Add(reader[0].ToString());
+            }
+            return codeList;
+        }
 
         public void Dispose()
         {

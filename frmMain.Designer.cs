@@ -79,14 +79,14 @@
             // btnNewSales
             // 
             this.btnNewSales.Name = "btnNewSales";
-            this.btnNewSales.Size = new System.Drawing.Size(180, 22);
+            this.btnNewSales.Size = new System.Drawing.Size(126, 22);
             this.btnNewSales.Text = "매출 등록";
             this.btnNewSales.Click += new System.EventHandler(this.btnNewSales_Click);
             // 
             // btnSales
             // 
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(180, 22);
+            this.btnSales.Size = new System.Drawing.Size(126, 22);
             this.btnSales.Text = "매출 내역";
             // 
             // toolStripMenuItem2
@@ -101,13 +101,13 @@
             // btnNewPurchase
             // 
             this.btnNewPurchase.Name = "btnNewPurchase";
-            this.btnNewPurchase.Size = new System.Drawing.Size(180, 22);
+            this.btnNewPurchase.Size = new System.Drawing.Size(126, 22);
             this.btnNewPurchase.Text = "발주 등록";
             // 
             // ptnPurchase
             // 
             this.ptnPurchase.Name = "ptnPurchase";
-            this.ptnPurchase.Size = new System.Drawing.Size(180, 22);
+            this.ptnPurchase.Size = new System.Drawing.Size(126, 22);
             this.ptnPurchase.Text = "발주 내역";
             // 
             // toolStripMenuItem3
@@ -122,14 +122,14 @@
             // btnNewMember
             // 
             this.btnNewMember.Name = "btnNewMember";
-            this.btnNewMember.Size = new System.Drawing.Size(180, 22);
+            this.btnNewMember.Size = new System.Drawing.Size(126, 22);
             this.btnNewMember.Text = "고객 등록";
             this.btnNewMember.Click += new System.EventHandler(this.btnNewMember_Click);
             // 
             // btnMemberInfo
             // 
             this.btnMemberInfo.Name = "btnMemberInfo";
-            this.btnMemberInfo.Size = new System.Drawing.Size(180, 22);
+            this.btnMemberInfo.Size = new System.Drawing.Size(126, 22);
             this.btnMemberInfo.Text = "고객 정보";
             this.btnMemberInfo.Click += new System.EventHandler(this.btnMemberInfo_Click);
             // 
@@ -180,8 +180,8 @@
             // btnLogout
             // 
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(67, 20);
-            this.btnLogout.Text = "로그아웃";
+            this.btnLogout.Size = new System.Drawing.Size(43, 20);
+            this.btnLogout.Text = "종료";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // notifyIcon1

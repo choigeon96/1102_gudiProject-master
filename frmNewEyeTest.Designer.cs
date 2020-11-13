@@ -110,7 +110,7 @@
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(626, 68);
-            this.textBox17.TabIndex = 110;
+            this.textBox17.TabIndex = 3;
             // 
             // label14
             // 
@@ -152,7 +152,7 @@
             this.groupBox1.Location = new System.Drawing.Point(8, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(626, 92);
-            this.groupBox1.TabIndex = 169;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "안경";
             // 
@@ -385,7 +385,7 @@
             this.groupBox2.Location = new System.Drawing.Point(8, 112);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(626, 90);
-            this.groupBox2.TabIndex = 169;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "렌즈";
             // 

@@ -78,7 +78,6 @@ namespace 화면설계
         private void btnSchedule_Click(object sender, EventArgs e)
         {
             Schedule frm = new Schedule();
-            frm.MdiParent = this;
             frm.Show();
         }
 

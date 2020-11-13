@@ -47,6 +47,8 @@ namespace 화면설계
         public DataTable GetProductData(string category)
         {
             DataTable dt = new DataTable();
+            //string sql = @"select product_no, product_name, manufacture, category, purchase_price, selling_price, distributor 
+            //               from product";
             string sql = @"select product_no, product_name, manufacture, category, purchase_price, selling_price, distributor 
                            from product
                            where category = @category;";

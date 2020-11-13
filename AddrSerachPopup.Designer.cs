@@ -166,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddrSerachPopup";
-            this.Text = "AddrSerachPopup";
+            this.Text = "주소검색";
             this.ResumeLayout(false);
             this.PerformLayout();
 
